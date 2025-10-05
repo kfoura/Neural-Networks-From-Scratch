@@ -1,3 +1,1 @@
-import numpy
-
-print("test")
+print("Hello World!")
