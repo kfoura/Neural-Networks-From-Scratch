@@ -25,6 +25,10 @@ source venv/bin/activate
 python -m venv venv
 venv\Scripts\activate
 ```
+### For Linux
+python3 -m venv venv
+#### move to that directory
+source .venv/bin/activate
 
 ## 3. Install dependencies
 
