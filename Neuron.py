@@ -10,10 +10,10 @@ class Neuron:
         self.bias = bias
         self.input
 
-    def activate(self, input:list):
+    def setInput(self, input:list):
         self.input = input
     
-    def multiple(self):
+    def activate(self):
         output = 0
         for i in range (self.weights):
             output += self.weights[i] * self.input[i]
