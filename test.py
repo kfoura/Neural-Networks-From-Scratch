@@ -28,4 +28,9 @@ weights = [[0.2, 0.8, -0.5, 1], [0.5, -0.91, 0.26, -0.5], [-0.26, -0.27, 0.17, 0
 biases = [2, 3, 0.5]
 neurons = layer(weights, biases)
 outputs = neurons.activate(inputs)
+input = outputs
+weights = [[0.2, 0.8, -0.5], [0.5, -0.91, 0.26], [-0.27, 0.17, 0.87]]
+biases = [5, -0.8, 2]
+hiddenLayer = layer(weights, biases)
+ouputs = hiddenLayer.activate(input)
 print(outputs)
