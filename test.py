@@ -9,16 +9,12 @@ class neuron:
 
 
 class layer:
-    def __init__(self, weights, biases):
-        self.neurons = []
-        for i in range(len(biases)):
-            self.neurons.append(neuron(weights[i], biases[i]))
+    def __init__(self, weights: np.array, biases: np.array):
+        self.weights = np.array(weights)
+        self.biases = np.array(biases)
         
-    def activate(self, input):
-        output = []
-        for i in self.neurons:
-            output.append(i.activate(input))
-        return output
+    def activate(self, inputs):
+        return np.dot(inputs, self.weights.T) + self.biases
 
 
 
@@ -27,11 +23,9 @@ class layer:
 
 
 
-inputs = [1, 2, 3, 2.5]
+inputs = [[1,2,3,4], [5,6,7,8], [9,10,11,12], [13,14,15,16]]
 weights = [[0.2, 0.8, -0.5, 1], [0.5, -0.91, 0.26, -0.5], [-0.26, -0.27, 0.17, 0.87]]
 biases = [2, 3, 0.5]
 neurons = layer(weights, biases)
 outputs = neurons.activate(inputs)
 print(outputs)
-
-
